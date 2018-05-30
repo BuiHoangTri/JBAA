@@ -1,0 +1,237 @@
+function GetDataQuestion() {
+        var url = $("#base_url").val();
+        $.ajax({
+            url: url + '/getQuestionMaster',
+            type: 'GET',
+            data: {type: 'master'},
+            success: function (res) {
+                console.log(res);
+                $.each(res, function (i, item) {
+                    var i = Number(i) + Number(1);
+                    // set title
+                    var title = item.title;
+                    /**
+                     * @Question
+                     */
+                    var itemData = JSON.parse(item.data);
+                    var questionA = itemData.anwser_a;
+                    var questionB = itemData.anwser_b;
+                    var questionC = itemData.anwser_c;
+                    //
+                    if (itemData.anwser_to_right == 'anwser_a') {
+                        var anwser_to_right = itemData.anwser_a;
+                    } else if (itemData.anwser_to_right == 'anwser_b') {
+                        var anwser_to_right = itemData.anwser_b;
+                    } else {
+                        var anwser_to_right = itemData.anwser_c;
+                    }
+                    // get data
+                    $(".javascript-html-data .one-tech-jbaa-box").removeAttr('class').attr('class', 'one-tech-jbaa-box inline-block');
+                    var dataClass = "one-tech-jbaa-box-" + item.id;
+                    $(".javascript-html-data .one-tech-jbaa-box").addClass(dataClass);
+                    // get title
+                    $strHTML = '<img src="' + url + '/media/images/' + item.thumbnail + '" class="sp-only-show">';
+                    $(".javascript-html-data .one-tech-jbaa-box h4").html(item.title + $strHTML);
+                    // set image
+                    $(".javascript-html-data img").attr('src', url + '/media/images/' + item.thumbnail);
+                    // because we use first item for title so will start from number two
+                    // get question
+                    $(".javascript-html-data .one-tech-jbaa-box ul.survey-list li:nth-child(2) span").html(questionA);
+                    $(".javascript-html-data .one-tech-jbaa-box ul.survey-list li:nth-child(3) span").html(questionB);
+                    $(".javascript-html-data .one-tech-jbaa-box ul.survey-list li:nth-child(4) span").html(questionC);
+                    // remove event
+                    $(".javascript-html-data .one-tech-jbaa-box ul.survey-list li:nth-child(2)").attr('onclick', "selectQuestion('" + item.id + "','" + questionA + "',2)");
+                    $(".javascript-html-data .one-tech-jbaa-box ul.survey-list li:nth-child(3)").attr('onclick', "selectQuestion('" + item.id + "','" + questionB + "',3)");
+                    $(".javascript-html-data .one-tech-jbaa-box ul.survey-list li:nth-child(4)").attr('onclick', "selectQuestion('" + item.id + "','" + questionC + "',4)");
+                    // set result data
+                    $("#oneTech-asia-survey-result li:nth-child(" + i + ") ").addClass('test-question-' + item.id);
+                    // set question id
+                    $("#oneTech-asia-survey-result li:nth-child(" + i + ") span#test-question-main-id").html(item.id);
+                    // anwser right
+                    $("#oneTech-asia-survey-result li:nth-child(" + i + ") span#test-question-id").html(anwser_to_right);
+                    var newData = $(".javascript-html-data").html();
+                    $(".one-tech-jbaa-page-body").append(newData);
+                });
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+}
+
+
+function selectQuestion(id,title,li_position){
+
+    var the_question_before = $("#oneTech-asia-survey-result li.test-question-" + id + ' span#test-anwser').html();
+
+    $("#oneTech-asia-survey-result li.test-question-" + id + ' span#test-anwser').html(title);
+    // check anwser to right
+    var question = $("#oneTech-asia-survey-result li.test-question-" + id + ' span#test-question-id').html();
+    var user_anwser = $("#oneTech-asia-survey-result li.test-question-" + id + ' span#test-anwser').html();
+    var total_result = $("#oneTech-asia-survey-result li:nth-child(11) span#total_result").html();
+    // unactive
+    $(".one-tech-jbaa-box-" + id + " li").removeClass('active');
+    // set active
+    $(".one-tech-jbaa-box-" + id + " li:nth-child(" + li_position + ")").addClass('active');
+    // if(question == user_anwser) {
+    //     //     var new_total_result = Number(total_result) + Number(1);
+    //     //     $('ul#oneTech-asia-survey-result li:nth-child(11) span').html(new_total_result);
+    //     // } else if(the_question_before != 'no select'){
+    //     //     var _new_total_result = Number(total_result) - Number(1);
+    //     //     var new_total_result = (_new_total_result < 0 ) ? 0 : _new_total_result;
+    //     //     $('ul#oneTech-asia-survey-result li:nth-child(11) span').html(new_total_result);
+    //     // }
+}
+
+
+/**
+ *@author Le Minh Hoang
+ *@time 16 / 05 / 2018
+ */
+function survey_master_finish(){
+    $(".site-loading").show();
+    // question
+    var question_1 = $('ul#oneTech-asia-survey-result li:nth-child(1) #test-question-main-id').html();
+    var question_2 = $('ul#oneTech-asia-survey-result li:nth-child(2) #test-question-main-id').html();
+    var question_3 = $('ul#oneTech-asia-survey-result li:nth-child(3) #test-question-main-id').html();
+    var question_4 = $('ul#oneTech-asia-survey-result li:nth-child(4) #test-question-main-id').html();
+    var question_5 = $('ul#oneTech-asia-survey-result li:nth-child(5) #test-question-main-id').html();
+    var question_6 = $('ul#oneTech-asia-survey-result li:nth-child(6) #test-question-main-id').html();
+    var question_7 = $('ul#oneTech-asia-survey-result li:nth-child(7) #test-question-main-id').html();
+    var question_8 = $('ul#oneTech-asia-survey-result li:nth-child(8) #test-question-main-id').html();
+    var question_9 = $('ul#oneTech-asia-survey-result li:nth-child(9) #test-question-main-id').html();
+    var question_10 = $('ul#oneTech-asia-survey-result li:nth-child(10) #test-question-main-id').html();
+    // question
+    var anwser_1 = $('ul#oneTech-asia-survey-result li:nth-child(1) #test-anwser').html();
+    var anwser_2 = $('ul#oneTech-asia-survey-result li:nth-child(2) #test-anwser').html();
+    var anwser_3 = $('ul#oneTech-asia-survey-result li:nth-child(3) #test-anwser').html();
+    var anwser_4 = $('ul#oneTech-asia-survey-result li:nth-child(4) #test-anwser').html();
+    var anwser_5 = $('ul#oneTech-asia-survey-result li:nth-child(5) #test-anwser').html();
+    var anwser_6 = $('ul#oneTech-asia-survey-result li:nth-child(6) #test-anwser').html();
+    var anwser_7 = $('ul#oneTech-asia-survey-result li:nth-child(7) #test-anwser').html();
+    var anwser_8 = $('ul#oneTech-asia-survey-result li:nth-child(8) #test-anwser').html();
+    var anwser_9 = $('ul#oneTech-asia-survey-result li:nth-child(9) #test-anwser').html();
+    var anwser_10 = $('ul#oneTech-asia-survey-result li:nth-child(10) #test-anwser').html();
+    var _token = $('input[name="_token"]').val();
+    //var total_result = $('ul#oneTech-asia-survey-result li:nth-child(11) span').html();
+    var data_survey = {
+        question_1:question_1,
+        anwser_1:anwser_1,
+        question_2:question_2,
+        anwser_2:anwser_2,
+        question_3:question_3,
+        anwser_3:anwser_3,
+        question_4:question_4,
+        anwser_4:anwser_4,
+        question_5:question_5,
+        anwser_5:anwser_5,
+        question_6:question_6,
+        anwser_6:anwser_6,
+        question_7:question_7,
+        anwser_7:anwser_7,
+        question_8:question_8,
+        anwser_8:anwser_8,
+        question_9:question_9,
+        anwser_9:anwser_9,
+        question_10:question_10,
+        anwser_10:anwser_10,
+        _token:_token
+                        };
+    var url = $('#base_url').val();
+
+    $.ajax({
+        url:url + '/saveSurveyMaster',
+        type:'POST',
+        data:data_survey,
+        success: function(res){
+            $(".site-loading").hide();
+            $("#button-finish-survey").remove();
+            if(res.status == true ) {
+                    // $(".popup-result-public .main-popup h4").html(total_result);
+                    // $(".popup-result-public").removeClass('hide');
+                    // $(".time-count").addClass('hide');
+                window.location.href = url + '/ket-qua-thi-thu?id=' + res.survey_id;
+            } else {
+                    alert(res.message);
+                    window.location.href = url;
+            }
+        },
+        error: function(err){
+            window.location.href = url;
+        }
+    });
+
+}
+
+
+/**
+ *@timedown
+ *@ W3c school
+ */
+function start_time_survey(){
+    $(".site-loading").show();
+    $("#start_time_survey").remove();
+    GetDataQuestion();
+    $(".time-count").removeClass('hide');
+    $(".start_time_survey").addClass('hide');
+    $("#button-finish-survey").removeClass('hide');
+    $(".one-tech-jbaa-page-body").removeClass('hide');
+    $(".site-loading").hide();
+    $(document).ready(function(){
+        var _settime = new Date();
+        var setime = _settime.setMinutes(_settime.getMinutes() + 10);
+        // Set the date we're counting down to
+        //var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+        var countDownDate = setime;
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("time-count-down-text").innerHTML = minutes + ":" + seconds + "s ";
+
+            // If the count down is over, write some text
+            if (distance <= 0) {
+                $("#button-finish-survey").trigger('click');
+            }
+        }, 1000);
+    });
+}
+
+function close_result_popup(){
+    $(".popup-result-public").addClass('hide');
+}
+
+
+
+
+
+
+
+
+
+function survey_login_popup(router){
+      $("#redirect_route").val(router);
+      $("#button_onetech_poup_login").trigger('click');
+}
+
+
+function user_accept_join_survey(){
+    $(".box-intro").addClass('hide');
+    $(".box-action").removeClass('hide');
+}
+
+
+
+

@@ -1,0 +1,771 @@
+
+<!-- saved from url=(0040)https://onetech.vn/jbaa/thi-thu-nhan-qua -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta property="og:title" content="Test">
+    <meta property="og:url" content="https://onetech.vn/jbaa">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" content="https://onetech.vn/jbaa/site/img/lg-head-logo-red.png">
+
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+
+    
+    
+
+    <meta property="fb:app_id" content="228898814278616">
+
+    <link rel="shortcut icon" href="https://onetech.vn/ot-vn.ico?v=01" type="image/x-icon">
+    <link rel="icon" href="https://onetech.vn/ot-vn.ico?v=01" type="image/x-icon">
+
+    <title>Test</title>
+    <meta property="og:description" content="Test">
+    <link href="./files/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./files/less-common.min.css" rel="stylesheet" type="text/css">
+    <link href="./files/less-default.min.css" rel="stylesheet" type="text/css">
+    <link href="./files/less-smart-phone.min.css" rel="stylesheet" type="text/css">
+    <link href="./files/common.css" rel="stylesheet" type="text/css">
+    <link href="./files/style.css" rel="stylesheet" type="text/css">
+    <link href="./files/jbaa.css" rel="stylesheet" type="text/css">
+    <script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js"></script><script type="text/javascript" src="./files/jquery-1.11.3.min.js.tải xuống"></script><style></style>
+    <script type="text/javascript" src="./files/bootstrap.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./files/function.js.tải xuống"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 110) {
+                    $('.scrollToTop').fadeIn();
+                } else {
+                    $('.scrollToTop').fadeOut();
+                }
+                if($(window).width() >= 768 && $(this).scrollTop() > 110) {
+                    $('.t-fixed .navbar-header').css('display', 'none');
+                }
+                else if($(window).width() >= 768 && $(this).scrollTop() < 110) {
+                    $('.t-fixed .navbar-header').css('display', 'table');
+                }
+                else {
+                    $('.t-fixed .navbar-header').css('display', 'block');
+                }
+            });
+
+            $('.scrollToTop').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+        });
+        $(function(){
+            $('.dropdown').hover(function() {
+                if(!$('.navbar-toggle').is(':visible')) { // disable for mobile view
+                    if(!$(this).hasClass('open')) { // Keeps it open when hover it again
+                        $('.dropdown-toggle', this).trigger('click');
+                    }
+                }
+            }, function(){
+                $(this).removeClass('open');
+            });
+        });
+        function LoadHeader() {
+            if($(window).width() >= 768 && $(window).scrollTop() > 110) {
+                $('.t-fixed .navbar-header').css('display', 'none');
+                $('.highlight-section').css('display', 'none');
+            }
+            else if($(window).width() >= 768 && $(window).scrollTop() < 110) {
+                $('.t-fixed .navbar-header').css('display', 'table');
+                $('.highlight-section').css('display', 'none');
+            }
+            else {
+                $('.t-fixed .navbar-header').css('display', 'block');
+                $('.highlight-section').css('display', 'block');
+            }
+        }
+        $(window).on("load", LoadHeader);
+        $(window).on("orientationchange", LoadHeader);
+        $(window).on("resize", LoadHeader);
+    </script>
+</head>
+<body>
+    <div class="navbar-wrapper ot-header-menu t-fixed">
+        <div class="container ot-container">
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
+                <div class="navbar-header" style="display: none;">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar ot-hd-mn-icon01"></span>
+                        <span class="icon-bar ot-hd-mn-icon02"></span>
+                        <span class="icon-bar ot-hd-mn-icon03"></span>
+                    </button>
+                    <div class="navbar-header-left">
+                        <a class="navbar-brand ot-header-logo" href="https://onetech.vn/jbaa" alt="OneTech Asia Corporation | Công ty One Tech, One Tech Japan">
+                            <img data-pagespeed-no-transform="" src="./files/onetech-logo.png" height="60" class="header-logo-white" alt="OneTech Asia Corporation (OneTech)">
+                            <img data-pagespeed-no-transform="" src="./files/onetechvn-blue.png" height="60" class="header-logo-blue" alt="OneTech Asia Corporation (OneTech)">
+                        </a>
+                    </div>
+                    <div class="navbar-header-right">
+                        <div class="above-menu">
+                            <div class="header-contact hidden-xs hotline">
+                                <span>Hotline:</span>
+                                <a class="main-color" href="tel:+842866529333" rel="nofollow">(+84)2866-529-333</a>
+                                <a class="login-link" href="https://onetech.vn/jbaa/dang-nhap">Đăng nhập</a>
+                                <a class="register-link" href="https://onetech.vn/jbaa/dang-ky">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse ot-header-rmenu">
+                                        <ul class="nav navbar-nav">
+                        <li class=""><a href="https://onetech.vn/jbaa">Về JBAA</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/thi-thu-cap-bang">Thi và cấp bằng</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/sach-giao-khoa">Sách giáo khoa</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/khao-sat-nhan-qua">Khảo sát<br>nhận quà</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/thi-thu-nhan-qua">Thi thử<br>nhận quà</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/cong-ty-lien-ket">Công ty liên kết</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/ung-dung">Ứng dụng</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/hoi-dap">FAQ</a></li>
+                        <li class=""><a href="https://onetech.vn/jbaa/lien-he">Liên hệ</a></li>
+                    </ul>
+                    <div class="btn-close-menu hidden-sm hidden-lg hidden-md">
+                                                    Bùi Hoàng Trí<br>
+                            <a class="" href="https://onetech.vn/jbaa/dang-xuat">Đăng xuất </a>
+                                                
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+        
+    <script type="text/javascript" src="./files/survey_master.js.tải xuống"></script>
+
+    <script src="./files/login-facebook-survey-welcome.js.tải xuống"></script>
+    <script src="./files/facebookSDK.js.tải xuống"></script>
+
+
+    <div class="container ot-container">
+        <h1 class="ot-box-title">
+            <div class="table-cell">
+                Thi thử nhận quà
+            </div>
+        </h1>
+        <div class="box-intro">
+                        
+                
+                    
+                
+                
+            
+            <!-- <div class="inline-block intro-text">
+                <p>Hãy tham gia kiểm tra trình độ business manner với 10 câu hỏi, bạn sẽ có cơ hội nhận được nhiều phần quà đặc biệt:</p>
+                <p>。 10 quyển sách Japanese business manner JBAA 3kyu dành cho 10 bạn đầu tiên tham gia thi thử.</p>
+                <p>。 10 quyển sách Japanese business manner JBAA 3kyu dành cho 10 bạn may mắn nhất khi tham gia thi thử.</p>
+                <p>。 10 phần quà lưu niệm đến từ Nhật Bản dành cho 10 bạn ngẫu nhiên khi tham gia thi thử trong ngày 26/05/2018 tại Lễ hội tháng 5 của trường Đại học Khoa học Xã hội và Nhân văn.</p>
+
+
+
+                <p>Điều kiện</p>
+                <p>。 Thời gian tham gia: từ 26/05/2018 〜 02/06/2018.</p>
+                <p>。 Trả lời đúng 5/10 câu hỏi.</p>
+
+                <p>10 phần quà dành cho các bạn may mắn sẽ được
+                    công bố trên fanpage và thông báo qua email.</p><br/>
+
+            </div> -->
+			<div class="ot-color-desc">
+				<span class="left-mark"></span>
+				<p class="desc text-center">Hãy tham gia kiểm tra trình độ business manner với 10 câu hỏi, bạn sẽ có cơ hội nhận được nhiều phần quà đặc biệt</p>
+				<span class="right-mark"></span>
+			</div>
+			<div class="ot-pr-box">
+				<div class="ot-book-box">
+					<div class="img">
+						<img src="./files/i-pr-book.png" class="" alt="book">
+					</div>
+					<div class="desc">
+						<p class="has-mark"><span class="mae"></span><span class="ushiro"></span><span class="text-24">10</span> <strong class="text-16">quyển sách</strong> Japanese business manner <span class="text-24 blue">JBAA 3kyu</span><br> dành cho <span class="text-24">10</span><strong class="text-underline text-16"> bạn đầu tiên</strong> tham gia thi thử</p>
+						<p class="has-mark"><span class="mae"></span><span class="ushiro"></span><span class="text-24">10</span> <strong class=" text-16">quyển sách</strong> Japanese business manner <span class="text-24 blue">JBAA 3kyu</span><br> dành cho <span class="text-24">10</span><strong class="text-underline text-16"> bạn may mắn nhất</strong> khi tham gia thi thử</p>
+					</div>
+				</div>
+				<div class="ot-gift-box">
+					<div class="desc">
+						<p><span class="text-24">10</span> <strong class=" text-16">phần quà lưu niệm</strong> đến từ <span class="text-24 blue">Nhật Bản</span> dành <br>cho <strong class=" text-16">10 bạn ngẫu nhiên</strong> khi tham gia thi thử trong ngày <span class="text-24 blue">26/05/2018</span> tại <strong class="text-underline text-16">lễ hội tháng 5</strong> của trường <br><strong class="text-16">Đại học Khoa học Xã hội và Nhân văn.</strong></p>
+					</div>
+					<div class="img"><img src="./files/i-pr-gift.png" class="" alt="gift"></div>
+				</div>
+			</div>
+			<div class="ot-condition">
+				<strong class="text">Điều kiện</strong>
+			</div>
+			<div class="ot-condition-box">
+				<div class="text"><strong>※　Thời gian tham gia từ 26/05/2018 đến hết 02/06/2018</strong></div><br>
+				<div class="text"><strong>※　Trả lời đúng 5/10 câu hỏi</strong></div>
+			</div>
+			<p class="text-center">10 phần quà dành cho các bạn may mắn sẽ được công bố trên fanpage và thông báo qua email</p>
+        </div>
+        <div class="public-content-test box-action">
+            <div class="one-tech-jbaa-page-header" style="text-align: center;margin-bottom: 20px;">
+                                    
+                            </div>
+            <div class="one-tech-jbaa-page-body inline-block">
+            
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-39">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>会社のパソコンから友人にメールを送っても？<img src="./files/10.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;39&#39;,&#39;良い&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>良い</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;39&#39;,&#39;良くない&#39;,3)" class="active">
+                    <p class="btn-survey"> <i>2</i>  <span>良くない</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;39&#39;,&#39;休憩時間なら良い&#39;,4)">
+                    <p class="btn-survey"> <i>3</i>  <span>休憩時間なら良い</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/10.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-48">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>会社のパソコンから自宅で使用する家電製品を買っても良い？<img src="./files/34.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;48&#39;,&#39;良い&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>良い</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;48&#39;,&#39;良くない&#39;,3)" class="active">
+                    <p class="btn-survey"> <i>2</i>  <span>良くない</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;48&#39;,&#39;休憩時間なら良い&#39;,4)">
+                    <p class="btn-survey"> <i>3</i>  <span>休憩時間なら良い</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/34.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-49">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>交通渋滞で待ち合わせ時間より15分遅れてしまった。相手に対しては？<img src="./files/38.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;49&#39;,&#39;謝る&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>謝る</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;49&#39;,&#39;交通渋滞で遅れたことを伝え、謝らない&#39;,3)" class="active">
+                    <p class="btn-survey"> <i>2</i>  <span>交通渋滞で遅れたことを伝え、謝らない</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;49&#39;,&#39;謝らない&#39;,4)">
+                    <p class="btn-survey"> <i>3</i>  <span>謝らない</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/38.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-43">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>友達がケガをして入院した。 お見舞いには何を持って行く？<img src="./files/13.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;43&#39;,&#39;鉢に植えられた花&#39;,2)" class="active">
+                    <p class="btn-survey"> <i>1</i> <span>鉢に植えられた花</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;43&#39;,&#39;果物&#39;,3)">
+                    <p class="btn-survey"> <i>2</i>  <span>果物</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;43&#39;,&#39;下着&#39;,4)">
+                    <p class="btn-survey"> <i>3</i>  <span>下着</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/13.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-38">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>自動車のセールスをしている友人から、会社の社員名簿をコピーさせて欲しいと頼まれた。<img src="./files/8.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;38&#39;,&#39;無料でコピーさせる&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>無料でコピーさせる</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;38&#39;,&#39;有料でコピーさせる&#39;,3)">
+                    <p class="btn-survey"> <i>2</i>  <span>有料でコピーさせる</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;38&#39;,&#39;断る&#39;,4)" class="active">
+                    <p class="btn-survey"> <i>3</i>  <span>断る</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/8.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-46">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>異性のお客様から何度も食事に誘われて困っている。<img src="./files/22.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;46&#39;,&#39;はっきりと断る&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>はっきりと断る</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;46&#39;,&#39;食事に付き合う&#39;,3)">
+                    <p class="btn-survey"> <i>2</i>  <span>食事に付き合う</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;46&#39;,&#39;上司に相談する&#39;,4)" class="active">
+                    <p class="btn-survey"> <i>3</i>  <span>上司に相談する</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/22.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-41">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>自分が今、会社で開発中の製品について詳しく教えて欲しいと友人から頼まれた。<img src="./files/11.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;41&#39;,&#39;友人なので教えてあげる&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>友人なので教えてあげる</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;41&#39;,&#39;誰にも話さないという条件でなら教えてあげる&#39;,3)">
+                    <p class="btn-survey"> <i>2</i>  <span>誰にも話さないという条件でなら教えてあげる</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;41&#39;,&#39;教えない&#39;,4)" class="active">
+                    <p class="btn-survey"> <i>3</i>  <span>教えない</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/11.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-44">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>上司と食事に行ったら「好きな物を食べて良い」と言われた。何を注文する？<img src="./files/15.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;44&#39;,&#39;自分の好きな物を注文する&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>自分の好きな物を注文する</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;44&#39;,&#39;上司と同じか、上司より安い物を注文する&#39;,3)" class="active">
+                    <p class="btn-survey"> <i>2</i>  <span>上司と同じか、上司より安い物を注文する</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;44&#39;,&#39;上司より高い物を注文する&#39;,4)">
+                    <p class="btn-survey"> <i>3</i>  <span>上司より高い物を注文する</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/15.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-45">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>お客様の会社に訪問するため、同僚と待ち合わせをしたが、時間になっても同僚が来ない。 携帯電話も繋がらない。<img src="./files/18.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;45&#39;,&#39;自分だけでお客様の会社を訪問する&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>自分だけでお客様の会社を訪問する</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;45&#39;,&#39;電話でお客様に事情を説明し、同僚を待つ&#39;,3)" class="active">
+                    <p class="btn-survey"> <i>2</i>  <span>電話でお客様に事情を説明し、同僚を待つ</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;45&#39;,&#39;同僚と電話が繋がるまで、その場で待つ&#39;,4)">
+                    <p class="btn-survey"> <i>3</i>  <span>同僚と電話が繋がるまで、その場で待つ</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/18.jpg" class="pc-only-show">
+            </div>
+        </div>
+    
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-47">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>仕事で使っているパソコンを貸して欲しいと妹に頼まれた。<img src="./files/26.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;47&#39;,&#39;貸してあげる&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>貸してあげる</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;47&#39;,&#39;貸さない&#39;,3)">
+                    <p class="btn-survey"> <i>2</i>  <span>貸さない</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;47&#39;,&#39;仕事に関する資料を見ない事を条件に貸す&#39;,4)" class="active">
+                    <p class="btn-survey"> <i>3</i>  <span>仕事に関する資料を見ない事を条件に貸す</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/26.jpg" class="pc-only-show">
+            </div>
+        </div>
+    </div>
+            <div class="test-info-section hide">
+                <label class="main-color">Thông tin liên lạc</label>
+                <div class="test-info-row row">
+                    <div class="col-lg-2 col-sm-12">Họ và tên</div>
+                    <input class="col-lg-10 col-sm-12" type="text">
+                </div>
+                <div class="test-info-row row">
+                    <div class="col-lg-2 col-sm-12">Số điện thoại</div>
+                    <input class="col-lg-10 col-sm-12" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="javascript-html-data hide">
+        <div class="one-tech-jbaa-box inline-block one-tech-jbaa-box-47">
+            <ul class="survey-list col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <li class="sourvey-item">
+                    <h4>仕事で使っているパソコンを貸して欲しいと妹に頼まれた。<img src="./files/26.jpg" class="sp-only-show"></h4>
+                </li>
+                <li onclick="selectQuestion(&#39;47&#39;,&#39;貸してあげる&#39;,2)">
+                    <p class="btn-survey"> <i>1</i> <span>貸してあげる</span>  </p>
+                </li>
+                <li onclick="selectQuestion(&#39;47&#39;,&#39;貸さない&#39;,3)">
+                    <p class="btn-survey"> <i>2</i>  <span>貸さない</span> </p>
+                </li>
+                <li onclick="selectQuestion(&#39;47&#39;,&#39;仕事に関する資料を見ない事を条件に貸す&#39;,4)" class="active">
+                    <p class="btn-survey"> <i>3</i>  <span>仕事に関する資料を見ない事を条件に貸す</span> </p>
+                </li>
+            </ul>
+            <div class="survey-thumb col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="./files/26.jpg" class="pc-only-show">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="javascript-data-question hide">
+        <ul id="oneTech-asia-survey-result">
+            <li class="test-question-39">
+                <span id="test-question-main-id">39</span>
+                <span id="test-question-id">休憩時間なら良い</span>
+                <span id="test-anwser">良くない</span>
+            </li>
+            <li class="test-question-48">
+                <span id="test-question-main-id">48</span>
+                <span id="test-question-id">休憩時間なら良い</span>
+                <span id="test-anwser">良くない</span>
+            </li>
+            <li class="test-question-49">
+                <span id="test-question-main-id">49</span>
+                <span id="test-question-id">謝らない</span>
+                <span id="test-anwser">交通渋滞で遅れたことを伝え、謝らない</span>
+            </li>
+            <li class="test-question-43">
+                <span id="test-question-main-id">43</span>
+                <span id="test-question-id">下着</span>
+                <span id="test-anwser">鉢に植えられた花</span>
+            </li>
+            <li class="test-question-38">
+                <span id="test-question-main-id">38</span>
+                <span id="test-question-id">断る</span>
+                <span id="test-anwser">断る</span>
+            </li>
+            <li class="test-question-46">
+                <span id="test-question-main-id">46</span>
+                <span id="test-question-id">上司に相談する</span>
+                <span id="test-anwser">上司に相談する</span>
+            </li>
+            <li class="test-question-41">
+                <span id="test-question-main-id">41</span>
+                <span id="test-question-id">教えない</span>
+                <span id="test-anwser">教えない</span>
+            </li>
+            <li class="test-question-44">
+                <span id="test-question-main-id">44</span>
+                <span id="test-question-id">上司より高い物を注文する</span>
+                <span id="test-anwser">上司と同じか、上司より安い物を注文する</span>
+            </li>
+            <li class="test-question-45">
+                <span id="test-question-main-id">45</span>
+                <span id="test-question-id">同僚と電話が繋がるまで、その場で待つ</span>
+                <span id="test-anwser">電話でお客様に事情を説明し、同僚を待つ</span>
+            </li>
+            <li class="test-question-47">
+                <span id="test-question-main-id">47</span>
+                <span id="test-question-id">仕事に関する資料を見ない事を条件に貸す</span>
+                <span id="test-anwser">仕事に関する資料を見ない事を条件に貸す</span>
+            </li>
+            <li>
+                <span id="total_result">0</span>
+            </li>
+        </ul>
+    </div>
+    <div class="inline-block text-center">
+        <br><br><button id="button-finish-survey" class="blue-button" onclick="survey_master_finish();"> Kết thúc làm bài </button>
+    </div>
+    <!-- time countdown -->
+    <div class="time-count">
+        <span id="time-count-down-text">8:16s </span>
+    </div>
+    <!-- poup result -->
+    <div class="popup-result-public inline-block hide">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 main-popup">
+                    <h4>0</h4><button class="close" type="button"></button>
+                    <div class="share-to-facebook thumbnail">
+
+                    </div>
+                    <div class="inline-block text-center">
+                        <button class="btn btn-defaulta" onclick="close_result_popup()"> Đóng </button>
+                    </div>
+            </div>
+    </div>
+    <input type="hidden" name="_token" value="7JwjWXuDkNTyQChIDnPr5fImCV6595m8ZmhBnmId">
+    <div class="onetech-poup-login">
+    <!-- Button to Open the Modal -->
+    <button id="button_onetech_poup_login" type="button" class="btn btn-primary hide" data-toggle="modal" data-target="#myModal">
+        Open modal
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Vui lòng đăng nhập để tiếp tục</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="public-facebook-login-button text-center inline-block" style="padding-top: 50px;">
+                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    
+                    <a href="https://onetech.vn/jbaa/redirect-facebook"><img style="width: 300px; display: none !important;" src="https://onetech.vn/jbaa/img/dang-nhap-facebook.png" hidden=""></a>
+
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form method="POST" action="https://onetech.vn/jbaa/actionLogin">
+                        <input type="hidden" name="_token" value="7JwjWXuDkNTyQChIDnPr5fImCV6595m8ZmhBnmId" required="">
+                        <div class="form-group">
+                            <label for="email">Email </label>
+                            <input type="email" class="form-control" id="email" name="email" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd"> Mật khẩu </label>
+                            <input type="password" class="form-control" id="pwd" minlength="6" name="password" required="">
+                        </div>
+                        <input type="hidden" name="redirect_route" id="redirect_route" value="surveyWelcome">
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        <br><br>
+                        <a href="https://onetech.vn/jbaa/dang-ky">Đăng ký tài khoản mới</a>
+                        <br><br>
+                        
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="button_onetech_poup_login_close" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+    </div>
+    <div class="footer-v2">
+        <div><img src="./files/footer-bg.png" class="footer-bg"></div>
+        <div class="footer-content">
+            <div class="container-fluid">
+                <div class="ot-box-content container ot-container">
+                    <div class="footer-row w-footer-row">
+                        <div class="footer-logo ot-table-cell">
+                            <a href="http://onetech.jp/">
+                                <img src="./files/logo1.png" class="footer-logo-jp" alt="Logo OneTech Japan">
+                            </a>
+                        </div>
+                        <div class="footer-cat-column w-contact">
+                            <div class="ot-col-contact">
+                                <div class="ot-table">
+                                    <ul class="footer-contact-info ot-table-cell">
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa" class="footer-title">
+                                                    Về JBAA
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/thi-thu-cap-bang" class="footer-title">
+                                                    Thi và cấp bằng
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/sach-giao-khoa" class="footer-title">
+                                                    Sách giáo khoa
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/khao-sat-nhan-qua" class="footer-title">
+                                                    Khảo sát nhận quà
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/thi-thu-nhan-qua" class="footer-title">
+                                                    Thi thử nhận quà
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/cong-ty-lien-ket" class="footer-title">
+                                                    Công ty liên kết
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/ung-dung" class="footer-title">
+                                                    Ứng dụng
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/chinh-sach-bao-mat" class="footer-title">
+                                                    Chính sách bảo mật
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/hoi-dap" class="footer-title">
+                                                    FAQ
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="text-white text-left">
+                                                <p class="footer-icon">
+                                                    <img src="./files/i-arrow.png" alt="" height="16px">
+                                                </p>
+                                                <a href="https://onetech.vn/jbaa/lien-he" class="footer-title">
+                                                    Liên hệ
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-link">
+                            <ul class="footer-link">
+                                <li>
+                                    <div class="icon"><img src="./files/i-email.png" alt="" width="16px"></div>
+                                    <a class="text-link" href="mailto:jbaa@onetech.vn?Subject=" target="_top">Email: jbaa@onetech.vn</a>
+                                </li>
+                                <li>
+                                    <div class="icon"><img src="./files/i-tell.png" alt="" width="16px"></div>
+                                    <a class="text-link" href="tel:+842866529333">Tel: (+84)2866-529-333</a>
+                                </li>
+                                <li>
+                                    <div class="icon"><img src="./files/i-map.png" alt="" width="16px"></div>
+                                    <a class="text-link">Add: 504, tòa nhà Waseco, 10 Phổ Quang, Tân Bình, HCM</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-facebook">
+                            <div class="logo-jbaa-section">
+                                <img src="./files/jbaa.png" width="160px" alt="Logo JBAA">
+                            </div>
+                            <div class="fb-page" data-href="https://www.facebook.com/onetechbusinessmanner/" data-width="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="./files/saved_resource" class="fb-xfbml-parse-ignore"><a href="./files/saved_resource">JBAA Vietnam</a></blockquote></div>
+                        </div>
+                        <div class="social">
+                            <a href="./files/saved_resource" target="_blank" title="Contact Facebook"><img alt="Contact Facebook" src="https://onetech.vn/jbaa/site/img/social-facebook.png" hidden="" style="display: none !important;"></a>
+                        </div>
+                        <div class="social">
+                            <a href="skype:nguyenlamthao?chat" title="Contact Skype"><img alt="Contact Skype" src="./files/skype.png"></a>
+                        </div>
+                        <div class="social">
+                            <a href="mailto:contact@onetech.vn" title="Contact Email"><img alt="Contact Email" src="./files/i-email-sp.png"></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://plus.google.com/110663246602949147612?rel=author" target="_blank" title="Contact Google Plus"><img alt="Contact Google Plus" src="https://onetech.vn/jbaa/site/img/i-google-plus.png" hidden="" style="display: none !important;"></a>
+                        </div>
+                        <div class="social">
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#youtube_modal"><img title="" alt="" src="https://onetech.vn/jbaa/site/img/i-youtube.png" hidden="" style="display: none !important;"></a>
+                        </div>
+                        <a href="https://onetech.vn/jbaa/thi-thu-nhan-qua#" class="scrollToTop" style="display: block; opacity: 0.334331;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- loading -->
+    <div class="inline-block site-loading" style="display: none;">
+        <div class="main-box-loading">
+            <img src="./files/g2a_spinner.gif">
+        </div>
+    </div>
+    <input type="hidden" id="base_url" value="https://onetech.vn/jbaa">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=228898814278616&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+
+<div class="selection_bubble_root" style="display: none;"></div></body></html>
