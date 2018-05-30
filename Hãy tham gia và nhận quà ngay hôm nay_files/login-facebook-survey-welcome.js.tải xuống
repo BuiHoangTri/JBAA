@@ -1,0 +1,57 @@
+//function checkLoginState() {
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '286026575260949',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v3.0',
+            oauth: true
+        });
+
+        FB.AppEvents.logPageView();
+
+    };
+
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+   
+   
+   
+  function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
+   
+   function statusChangeCallback(response){
+       //console.log(response);
+       //http://graph.facebook.com/67563683055/picture?type=square
+       var account_id = response.authResponse.userID;
+       var avatar = 'http://graph.facebook.com/' + account_id + '/picture?type=square';
+       var url = $("#base_url").val();
+       $.ajax({
+           url:url + '/LoginByFacebook',
+           type:'GET',
+           data:{account_id:account_id,avatar:avatar},
+           success: function(res){
+               if(res.status == true ) {
+                    $("#button_onetech_poup_login_close").trigger('click');
+                    //$("#button_onetech_poup_login").removeClass('hide');
+                    $(".box-intro").addClass('hide');
+                    $(".box-action").removeClass('hide');
+               } else {
+                   window.location.href = url + '/dang-nhap';
+               }
+           },
+           error: function(err){
+               window.location.href = url + '/login';
+           }
+       });
+   }
